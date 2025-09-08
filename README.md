@@ -180,7 +180,8 @@ This phase involves creating a local server on a Windows PC to test the model's 
 
 #### 2.2 Running the Local Server
 Execute the following command in your terminal:
-```bash
+```bash 
+
 uvicorn main:app --reload
 The API will now be running locally at http://127.0.0.1:8000.
 
@@ -188,15 +189,13 @@ The API will now be running locally at http://127.0.0.1:8000.
 The main.py script loads the Keras model and defines a /predict endpoint.
 
 
-'''
-art 3: Cloud Deployment (Render)
+Part 3: Cloud Deployment (Render)
 This section guides you through deploying the FastAPI application to a free, public URL using Render.
 
 3.1 Preparation
 Create requirements.txt: This file lists all the Python libraries your project needs.
 
 Bash
-
 pip freeze > requirements.txt
 Important: Manually review this file and remove any Windows-specific packages (like pywin32) to avoid deployment errors.
 
@@ -303,4 +302,3 @@ imageInput.addEventListener('change', (event) => {
 });
 ⭐ Important Note on Free Tier Usage
 The free web service on Render will spin down due to inactivity. The first request after a period of inactivity will take longer to process (15-30 seconds) as the service starts up. It is crucial to implement a loading indicator or a spinner in the user interface to provide feedback to the user during this initial delay.
-'''
